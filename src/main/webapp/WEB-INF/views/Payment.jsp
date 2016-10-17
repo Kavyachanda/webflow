@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  
 
 <style>
  
@@ -25,7 +27,14 @@ footer {
 body {
 width:100%;
 }
-  
+
+body {
+    font-family:Arial;
+    font-size: 14px;
+    background:#ddd;
+}
+
+
   </style>
 
 </head>
@@ -34,7 +43,7 @@ width:100%;
 
  <div class="text-center" >
   <h1 style="font-family:Georgia; font-size:40px;"><i>SHOPIN </i>
-    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="60px" height="60px" align="left" >
+    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="50px" height="50px" align="left" >
   <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png" alt="fb" width="30px" height="30px" align="right" >
   <img  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png" alt="twitter" width="30px" height="30px" align="right" >
   <img  src="http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png" alt="linkedin" width="30px" height="30px" align="right" >
@@ -44,8 +53,15 @@ width:100%;
   
      <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
+  <div class="navbar-header" class=" pull-left">
+    <sec:authorize access="isAuthenticated()">
+     <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME <sec:authentication property="principal.username"/> </a>
+     
+  	
+</sec:authorize>
+    </div>
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-       <li class="dropdown" >
+      <%--  <li class="dropdown" >
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -55,7 +71,7 @@ width:100%;
 						
 					</c:forEach>
         </ul>
-      </li>
+      </li> --%>
       
     
       <li><a href="HOME">HOME</a></li>
@@ -66,26 +82,16 @@ width:100%;
 	  <li><a href="ABOUTUS">ABOUT US</a></li>
 	  <li><a href="CONTACTUS">CONTACT US</a></li>
    <sec:authorize access="isAuthenticated()">
-   <li ><a href="viewcart" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
+   <li ><a href="Cart1" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>
-	<li><a href="">WELCOME<sec:authentication property="principal.username"/></a></li>
 </sec:authorize>
 					  
    </ul>
    </div>
   </nav>
-<meta charset="ISO-8859-1">
-<title>Payment</title>
-<style>
-body {
-    font-family:Arial;
-    font-size: 14px;
-    background:#ddd;
-}
-</style>
-</head>
-<body  style="padding-top: 75px">
 
+
+<br><br>
 <div class="container">
   <div class="row col-xs-4"></div>
   <div class="col-xs-4">
@@ -152,5 +158,7 @@ body {
 </div>
      
 </div> 
+<br><br><br>
+ <%@include file="Footer.jsp"%>	
 </body>
 </html>

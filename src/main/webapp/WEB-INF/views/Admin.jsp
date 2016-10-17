@@ -14,7 +14,7 @@
  
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width:100%;
+      width:80%;
 	  height:400px;
       margin: auto;
   }
@@ -50,7 +50,7 @@ width:100%;
   <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
   <div class="navbar-header" class=" pull-left">
-     <a class="navbar-brand" style="font-size:15px;" href="#"><span class="glyphicon glyphicon-user"></span> WELCOME ${msg} </a>
+     <a class="navbar-brand" style="font-size:15px;" href="#"><span class="glyphicon glyphicon-user"></span> WELCOME ADMIN </a>
     </div>
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
       
@@ -72,7 +72,7 @@ width:100%;
   </div> --> 
   
   
-  <div class="container">
+  <div class="container-fluid">
           <div class="col-xs-8 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
           <ul class="nav nav-pills nav-justified">
      <li><a href="Product">Product</a></li>
@@ -82,7 +82,7 @@ width:100%;
 </div>
 </div>
 
-<br>
+
 <c:choose>
 <c:when test="${userclickedproduct}">
 <c:import url="/WEB-INF/views/Product.jsp"/>
@@ -116,22 +116,21 @@ width:100%;
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-      <div class="item">
-        <img  src="http://static1.shop.indiatimes.com/imgbn/PhoneswithDeals.jpg" alt="mobile" >
+      <div class="item active">
+        <img  src="http://dotlineinfo.com/wp-content/uploads/2013/06/website-laptop-banner1.jpg" alt="mobile" >
       </div>
     
-
-	<div class="item active">
-        <img  src="http://2.bp.blogspot.com/-BDvmGGhmPVE/VDkDCz8wFZI/AAAAAAAAAT0/k21MsFYTCHE/s1600/Deals-on-Laptop.png" alt="mobile">
+     <div class="item">
+        <img  src="http://www.cukti.com/image/product_image/7466d49c-4665-4ad3-93f2-83c4d58f016a.jpg" alt="mobile" >
+      </div>
+      
+	<div class="item">
+        <img  src="http://dotlineinfo.com/wp-content/uploads/2013/06/website-dell-laptop-banner.jpg" alt="mobile">
       </div>
 
      
-      <div class="item">
-        <img  src="http://www.cukti.com/image/product_image/7466d49c-4665-4ad3-93f2-83c4d58f016a.jpg" alt="mobile" >
-      </div>
-
-      <div class="item">
-        <img src="http://blogs-images.forbes.com/geoffreymorrison/files/2016/05/Acer-Switch-V-10-Opener.jpg" alt="mobile">
+       <div class="item">
+        <img src="http://webtics.in/demo/V4UShopping2(23-1-2015)/images/slide3.jpg" alt="mobile">
       </div>
     </div>
 
@@ -146,6 +145,7 @@ width:100%;
     </a>
   </div>
 </div>
+<br><br><br><br>
  <%@include file="Footer.jsp"%> 
  
 </body>

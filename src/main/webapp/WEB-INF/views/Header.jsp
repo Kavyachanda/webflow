@@ -17,17 +17,24 @@ padding-top:0px;
 <body style="background-color:#CCCCCC;">
 <div class="text-center" >
   <h1 style="font-family:Georgia; font-size:40px;"><i>SHOPIN </i>
-    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="60px" height="60px" align="left" >
+    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="50px" height="50px" align="left" >
   <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png" alt="fb" width="30px" height="30px" align="right" >
   <img  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png" alt="twitter" width="30px" height="30px" align="right" >
   <img  src="http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png" alt="linkedin" width="30px" height="30px" align="right" >
   </h1>
   
   </div>
-  <nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
+  <div class="navbar-header" class=" pull-left">
+    <sec:authorize access="isAuthenticated()">
+     <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME <sec:authentication property="principal.username"/> </a>
+     
+  	
+</sec:authorize>
+    </div>
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-       <li class="dropdown" >
+       <%-- <li class="dropdown" >
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -37,7 +44,7 @@ padding-top:0px;
 						
 					</c:forEach>
         </ul>
-      </li>
+      </li> --%>
       
     
       <li><a href="HOME">HOME</a></li>
@@ -48,9 +55,8 @@ padding-top:0px;
 	  <li><a href="ABOUTUS">ABOUT US</a></li>
 	  <li><a href="CONTACTUS">CONTACT US</a></li>
    <sec:authorize access="isAuthenticated()">
-   <li ><a href="Cart" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
+   <li ><a href="Cart1" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>
-	<li><a href="">WELCOME<sec:authentication property="principal.username"/></a></li>
 </sec:authorize>
 					  
    </ul>

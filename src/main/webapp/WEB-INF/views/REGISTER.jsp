@@ -18,7 +18,7 @@
   <style>
   footer {
     
-    margin-top: 350px;
+    margin-top: 100px;
     
 } 
 body {
@@ -29,7 +29,7 @@ width:100%;
 <body style="background-color:#CCCCCC;">
 <div class="text-center" >
   <h1 style="font-family:Georgia; font-size:40px;"><i>SHOPIN </i>
-    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="60px" height="60px" align="left" >
+    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="50px" height="50px" align="left" >
   <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png" alt="fb" width="30px" height="30px" align="right" >
   <img  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png" alt="twitter" width="30px" height="30px" align="right" >
   <img  src="http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png" alt="linkedin" width="30px" height="30px" align="right" >
@@ -39,7 +39,7 @@ width:100%;
   <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-       <li class="dropdown" >
+    <%--    <li class="dropdown" >
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -50,7 +50,7 @@ width:100%;
 					</c:forEach>
         </ul>
       </li>
-      
+       --%>
     
       <li><a href="HOME">HOME</a></li>
        <sec:authorize access="!isAuthenticated()">
@@ -68,7 +68,19 @@ width:100%;
    </ul>
    </div>
   </nav>
+ <br>
  
+  <div class="container">
+ <c:choose>
+    <c:when test="${!empty SuccessMessage}">
+     <td colspan="2">
+      <div class="alert alert-success fade in">
+       <a href="login" class="close" data-dismiss="alert" aria-label="close">&times;</a>${SuccessMessage}
+      </div>
+     </td>
+    </c:when>
+   </c:choose>
+   </div>
   <section id="content">
 			<c:url var="addAction" value="adduser"></c:url>
 			<form:form action="${addAction}" commandName="user"
@@ -78,12 +90,12 @@ width:100%;
         <div class="col-xs-8 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title" style="text-align:center;">Registration Form</h3>
+			    		<h3 class="panel-title" style="text-align:center;">Register Here</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<%-- <form role="form"> --%>
+			    		 <form role="form">
 
-
+<br>
 <div class="form-group">
   <label class="col-md-4 control-label" for="username">User name</label>  
   <div class="col-md-6">
@@ -92,6 +104,7 @@ width:100%;
     
   </div>
 </div>
+<br>
 
 <!-- Text input-->
 <div class="form-group">
@@ -102,7 +115,7 @@ width:100%;
     
   </div>
 </div>
-
+<br>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="confirmpassword">Confirm Password</label>  
@@ -113,7 +126,7 @@ width:100%;
   </div>
 </div>
 
-
+<br>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Email</label>  
@@ -122,7 +135,7 @@ width:100%;
     
   </div>
 </div>
-
+<br>
 
 <!-- Text input-->
 <div class="form-group">
@@ -133,14 +146,16 @@ width:100%;
     
   </div>
 </div>
-
+<br>
 </div>
 
 <div class="form-group">
 <div class="col-xs-8 col-sm-6 col-md-4 col-sm-offset-2 col-md-offset-4">
-<input type="submit" value="Register" class="btn btn-info btn-block"><a href="LOGIN"></a>
+<input type="submit" value="Register" class="btn btn-info btn-block">
 </div>
 </div>
+<br>
+<form>
 </div>
 
 </div>
@@ -148,63 +163,7 @@ width:100%;
 </form>
 </form:form>
 </section>
-
-  <%-- 
-	<div class="container">
-	
-	
-	<c:choose>
-				<c:when test="${!empty SuccessMessage}">
-					<td colspan="2">
-						<div class="alert alert-success fade in">
-							<a href="login" class="close" data-dismiss="alert" aria-label="close">&times;</a>${SuccessMessage}
-						</div>
-					</td>
-				</c:when>
-			</c:choose>
-	
-	
-	
-	<section id="content">
-			<c:url var="addAction" value="adduser"></c:url>
-			<form:form action="${addAction}" commandName="user"
-				method="post">
-				<h4>Registration</h4>
-				<div>
-					<form:input path="userid" type="text" placeholder="USERID"
-						 required="true" id="userid" name="userid" />
-				</div>
-				<div>
-					<form:input path="username" type="text" placeholder="Username"
-					pattern=".{5,10}" required="true" id="username" name="username"
-					title="minimum length for username is 5" />
-				</div>
-				<div>
-					<form:input path="password" type="password" placeholder="Password" pattern=".{3,8}"
-						required="true" id="password" name="password" title="minimum length for passsword is 3" />
-				</div>
-				<div>
-					<form:input path="confirmpassword" type="password" placeholder="Confirm Password" pattern=".{3,8}"
-						required="true" id="confirmpassword" name="confirmpassword" title="minimum length for passsword is 3" />
-				</div>
-				<div>
-					<form:input path="email" type="email" placeholder="Email"
-						required="true" id="username" name="username" />
-				</div>
-				<div>
-					<form:input path="phone" type="text" placeholder="Phone"
-						pattern="^[789]\d{9}$" required="true" id="phone"
-						name="phone" title="Enter valid mobile number" />
-				</div>
-				<div>
-					<input type="submit" value="Register" /><a href="LOGIN">Sign In</a>
-				</div>
-
-			</form:form>
-			
-		</section>
-		
-	</div>  --%>
-	
+<br><br><br><br>
+	 <%@include file="Footer.jsp"%>		
 </body>
 </html>

@@ -21,7 +21,7 @@ public class Homecontroller {
 	
     
 	
-	@RequestMapping(value={"/","HOME"})
+	@RequestMapping(value={"/","HOME",})
 	public String homepage(Model m){
 		
 		m.addAttribute("product",new Product());
@@ -30,8 +30,18 @@ public class Homecontroller {
 		
 		return "HOME";
 	}
+	
+	@RequestMapping(value={"/navproduct/HOME","/ShowProduct/HOME","/navproduct/ShowProduct/HOME"})
+	public String product(Model m){
+		
+		m.addAttribute("product",new Product());
+		m.addAttribute("allCategory", categoryDAO.list());
+		m.addAttribute("allProduct",productDAO.list());
+		
+		return "redirect:/";
+	}
 
-@RequestMapping(value ="ShowProduct/{id}" )
+@RequestMapping(value ={"ShowProduct/{id}","navproduct/ShowProduct/{id}"})
 public String ShowProduct(@PathVariable("id") int id,RedirectAttributes attributes,Model m) {
 m.addAttribute("clickedshowproduct", "true");
 	m.addAttribute("IndividualProduct", productDAO.getproduct(id));

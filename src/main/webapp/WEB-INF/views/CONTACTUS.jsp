@@ -100,8 +100,8 @@ width:100%;
             <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
                 <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
+               Banjara hills road no.11 India<br>
+                Hyderabad India<br>
                 <abbr title="Phone">
                     P:</abbr>
                 (123) 456-7890

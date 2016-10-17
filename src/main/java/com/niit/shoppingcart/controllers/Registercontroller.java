@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.shoppingcart.DAO.CategoryDAO;
 import com.niit.shoppingcart.DAO.ProductDAO;
@@ -51,16 +52,26 @@ public class Registercontroller {
 	}
 
 	@RequestMapping(value = "adduser", method = RequestMethod.POST)
-	public String UserRegister(@ModelAttribute("user") User user, ModelAndView mv) {
+	public String UserRegister(@ModelAttribute("user") User user, ModelAndView mv,RedirectAttributes attributes) {
 		user.setEnabled(true);
 		user.setRole("ROLE_USER");
 		userDAO.saveOrUpdate(user);
-		mv.addObject("message", "Registration Success");
-		return "redirect:/";
+		
+	attributes.addFlashAttribute("SuccessMessage","Registration Successfull");
+		return "redirect:/REGISTER";
+	}
+	
+	
+	@RequestMapping(value = "/LOGINERROR")
+	public String Usererror(@ModelAttribute("user") User user, ModelAndView mv,RedirectAttributes attributes) {
+	
+		
+	attributes.addFlashAttribute("FailureMessage","Username and password are incorrect");
+		return "redirect:/LOGIN";
 	}
 
 	
-	@RequestMapping(value = "CONTACTUS")
+	@RequestMapping(value = {"CONTACTUS","/navproduct/CONTACTUS"})
 	public String Displaycontact(Model mv) {
 		mv.addAttribute("UserClickedContact", "true");
 		return "CONTACTUS";
