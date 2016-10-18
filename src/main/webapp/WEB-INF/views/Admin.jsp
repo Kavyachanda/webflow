@@ -18,6 +18,7 @@
 	  height:400px;
       margin: auto;
   }
+ 
   
 footer {
     
@@ -34,35 +35,33 @@ width:100%;
   </style>
 
 </head>
-<body  style="background-color:#CCCCCC;">
+  <body  style="background-color:#ffffff;">
 
 
- <div class="text-center" >
-  <h1 style="font-family:Georgia; font-size:40px;"><i>SHOPIN </i>
-    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="60px" height="60px" align="left" >
-  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png" alt="fb" width="30px" height="30px" align="right" >
-  <img  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png" alt="twitter" width="30px" height="30px" align="right" >
-  <img  src="http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png" alt="linkedin" width="30px" height="30px" align="right" >
-  </h1>
-  
-  </div>
-  
-  <nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">  
+<div class="container-fluid"> 
   <div class="container-fluid"> 
   <div class="navbar-header" class=" pull-left">
-     <a class="navbar-brand" style="font-size:15px;" href="#"><span class="glyphicon glyphicon-user"></span> WELCOME ADMIN </a>
+  <a class="navbar-brand" style="font-size:27px;margin-top: -4px;">
+     <i class="fa fa-opencart" aria-hidden="true"></i> SHOPIN </a>
+          <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME ADMIN </a>
+     
+
     </div>
-     <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-      
+     <ul class="nav navbar-nav navbar-right" style="margin-bottom:-2px;"> 
+    
       <li><a href="Admin">HOME</a></li>
-      <li><a href="REGISTER">REGISTER</a></li>
-      <!-- <li><a href="LOGIN">LOGIN</a></li> -->
-	  <li><a href="ABOUTUS">ABOUT US</a></li>
-	  <li><a href="CONTACTUS">CONTACT US</a></li>
+<!--       <li><a href="REGISTER">REGISTER</a></li>
+ -->     <!--  <li><a href="LOGIN">LOGIN</a></li> -->
+	 <!--  <li><a href="ABOUTUS">ABOUT US</a></li> -->
+	  <li><a href="CONTACTUS">CONTACT US</a></li>  
 	  <li><a href="perform_logout">LOGOUT</a></li>
-    </ul>
+
+					  
+   </ul>
    </div>
-  </nav>
+  </nav> 
+
  <!--  <div class="col-xs-8 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
   <ul class="nav nav-tabs col-lg-12">
     <li class="active"><a href="Product">Product</a></li>

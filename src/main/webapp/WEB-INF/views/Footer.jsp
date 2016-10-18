@@ -127,6 +127,7 @@
   style="opacity: 0.9">
   <div class="footer-left" style="margin-top: 10px">
    <p>Payment Options</p>
+   <br>
    <a href="#"><i class="fa fa-paypal" aria-hidden="true"></i> </a> . <a
     href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i> </a> . <a
     href="#"><i class="fa fa-cc-mastercard" aria-hidden="true"></i>
@@ -137,9 +138,11 @@
    </a>
    <p></p>
    <p></p>
+   <br>
    <p>
     $ H 0 P ! N <i class="fa fa-copyright" aria-hidden="true"> 2016</i>
    </p>
+   
    <p></p>
    <div class="footer-icons">
     <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
@@ -167,13 +170,14 @@
    </div>
   </div>
   <div class="footer-right">
+  <br>
    <p class="footer-company-about">
-    <span>About the company</span> <a href="http://www.secura.e-sim.org"
+    <span><b>About the company</b></span> <a href="http://www.secura.e-sim.org"
      title="Shopin, website template creation">Shopin</a>, our vision is to be Earth's most customer centric company; 
      to build a place where people can come to find and discover virtually anything they want to buy online. we endeavor to build that same destination in India by giving customers more of what they want vast selection, low prices, 
      fast and reliable delivery, and a trusted and convenient online shopping experience and provide sellers a world-class e-commerce 
      platform. We are committed to ensure 100% Purchase Protection for your shopping done on shopin.com so that you can benefit from a safe 
-     and  convenient payment options such as cash on delivery, easy returns and enjoy a completely hassle free online shopping experience. 
+     and enjoy a completely hassle free online shopping experience. 
      
      
    </p>

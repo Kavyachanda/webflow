@@ -35,7 +35,7 @@ public class Cartcontroller {
 
  int q;
  
- @RequestMapping(value={"addtocart/{id}","navproduct/addtocart/{id}"})
+ @RequestMapping(value={"addtocart/{id}","navproduct/addtocart/{id}","ShowProduct/addtocart/{id}","navproduct/ShowProduct/addtocart/{id}"})
  public String addTOCart(@ModelAttribute("cart")Cart cart,BindingResult result,@PathVariable("id") int productid){
  
   log.info("Cart operation start================================================================================================================");
