@@ -79,7 +79,6 @@ width:100%;
    </ul>
    </div>
   </nav> 
- <br>
  
   <div class="container">
  <c:choose>

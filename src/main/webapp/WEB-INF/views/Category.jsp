@@ -75,7 +75,7 @@ width:100%;
   <c:url var="addAction" value="addCategory" ></c:url>
 
 <form:form action="${addAction}" modelAttribute="category" id="btn-add">
-   <h3>
+   
                     <c:if test="${category.id==0}">
 		      
 	            </c:if>
@@ -83,7 +83,7 @@ width:100%;
 		     
 		     <%--  <form:hidden path="id"/> --%>
 	            </c:if>
-         </h3>
+         
           <div class="container">
           <div class="col-xs-8 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
           <ul class="nav nav-pills nav-justified">

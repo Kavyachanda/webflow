@@ -127,10 +127,10 @@ width:100%;
         <img  src="http://dotlineinfo.com/wp-content/uploads/2013/06/website-dell-laptop-banner.jpg" alt="mobile">
       </div>
 
-     
+     <!-- 
        <div class="item">
         <img src="http://webtics.in/demo/V4UShopping2(23-1-2015)/images/slide3.jpg" alt="mobile">
-      </div>
+      </div> -->
     </div>
 
     <!-- Left and right controls -->
@@ -147,6 +147,7 @@ width:100%;
 </c:if>
 </c:when>
 </c:choose>
+<div class="container">
 <c:forEach items="${allProduct}" var="product">
 		<!--  <div class="row"> -->
      <div class="col-xs-3" class="thumbnail">
@@ -156,15 +157,27 @@ width:100%;
   <div class="desc">
          Product Id : <c:out value="${product.id}" /><br>
          Product Name : <c:out value="${product.name }"/><br>
-         
-  <%--  <c:url var="action" value="addtocart/${product.id}"></c:url>
-   <form:form action="${action}" commandName="cart">
-   <input type="submit" class="btn btn-primary" value="Add To Cart" />
-   </form:form> --%>
+  
   
 							</div>
 							</div>	
 							</c:forEach>
+							</div>
+							
+	<%-- 						
+	<h2><c:out value="${product.name }"/></h2>
+		<br>
+			<div class="col-xs-6 w3-animate-left">
+				<div class="img">
+					<img  height="300px" width="300px" alt="${product.id}" src="<c:url value="/resources/images/Product/${product.id}.jpg"></c:url>">
+					<div class="desc">
+						<strong>${product.name}</strong>
+						
+					</div>
+				</div>
+			</div> --%>
+
+					
 							
     <c:choose>
 		<c:when test="${clickedshowproduct}">
@@ -214,71 +227,9 @@ width:100%;
 </c:choose> 
 
 
-<%-- <footer>
-<div style="background: Lavender">
 
- <c:choose>
- <c:when test="${!Administrator}">
-			<c:if test="${empty HideOthers}">
-	<table class="table">
-		<thead>
-			<tr>
-				<th>OUR COMPANY</th>
-				<th>TOP CATEGORIES</th>
-				<th>POLICIES AND INFO</th>
-			</tr>
-		</thead>
-		<tbody>
-
-			<tr>
-
-				<td>About us<br>F@SiOn-$TOrE  in Media<br> Ethnico<br>
-					Place of Origin<br> Blog<br></td>
-
-				<td>Laptop<br> camera<br>
-					mobile<br> </td>
-				<td>Terms & Conditions<br> Policy for Sellers<br>
-					Policy for Buyers<br> Shipping & Refund Policies<br>
-					Wholesale Policy<br> Privacy Policy<br></td>
-			</tr>
-			<tr>
-				<th>SUPPORT</th>
-				<th>PAYMENT OPTIONS</th>
-				<th>STAY CONNECTED</th>
-			</tr>
-			
-			
-			<tr>
-			<td><i class="fa fa-envelope" style="font-size: 30px;"></i>
-			
-					<a href="mailto:supportproduct@company.com">supportproduct@F@SiOn-$TOrE.com</a><br>
-					<i class="fa fa-phone" style="font-size: 30px; "></i>
-				<a>+91 8500822269</a>
-				<i class="fa fa-map-marker" style="font-size: 30px; color:"></i>
-				<a>
-					 Banjara hills road no.11 India</a>
-				</td>
-				<td><div class="footer-icons">
-				<a href="#"><i class="fa fa-facebook-official"style="font-size: 30px; "></i> </a>
-				<a href="#"><i class="fa fa-twitter" style="font-size: 30px; "></i></a>
-				<a href="#"><i class="fa fa-google" style="font-size: 30px; "></i></a>
-						<a href="#"><i class="fa fa-whatsapp" style="font-size: 30px; "></i></a>
-						<a href="#"><i class="fa fa-github"style="font-size: 30px; "></i></a>
-			</div></td>
-			<td>
-				<a href="#"><i class="fa fa-cc-mastercard" aria-hidden="true" style="font-size: 30px; "></i>
-			</a> . <a href="#"><i class="fa fa-cc-visa" aria-hidden="true" style="font-size: 30px;"></i> </a>
-			. <a href="#"><i class="fa fa-credit-card" aria-hidden="true" style="font-size: 30px; "></i>
-			</a></td>	
-			</tr>
-				
-			</tbody>
-			
-	</table>
-</c:if></c:when></c:choose></div>
-</footer> --%>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 <%@include file="Footer.jsp"%>	
 </body>

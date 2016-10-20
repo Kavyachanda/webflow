@@ -105,10 +105,10 @@ return "redirect:/Cart1";
  {
   model.addAttribute("IfPaymentClicked", "true");
   model.addAttribute("HideOthers","true");
-  return "Payment";
+  return "HOME";
  }
 
- @RequestMapping("pay")
+ @RequestMapping("Payment")
  public String payment(HttpSession session) {
   cartDAO.pay((Integer) session.getAttribute("userid"));
   return "HOME";

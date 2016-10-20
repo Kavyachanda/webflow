@@ -128,9 +128,9 @@ width:100%;
       </div>
 
      
-       <div class="item">
+      <!--  <div class="item">
         <img src="http://webtics.in/demo/V4UShopping2(23-1-2015)/images/slide3.jpg" alt="mobile">
-      </div>
+      </div> -->
     </div>
 
     <!-- Left and right controls -->

@@ -28,7 +28,7 @@ public class ApplicationContextConfig {
 		public DataSource getDataSource() {
 			DriverManagerDataSource dataSource = new DriverManagerDataSource();
 			dataSource.setDriverClassName("org.h2.Driver");
-			dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
+			dataSource.setUrl("jdbc:h2:tcp://localhost/~/kavya");
 			dataSource.setUsername("sa");
 			dataSource.setPassword("");
 			System.out.println("Datasource");
@@ -57,6 +57,7 @@ public class ApplicationContextConfig {
 			sessionBuilder.addAnnotatedClasses(Supplier.class);
 			sessionBuilder.addAnnotatedClasses(User.class);
 			sessionBuilder.addAnnotatedClasses(Cart.class);
+			sessionBuilder.addAnnotatedClasses(Checkout.class);
 			System.out.println("Session");
 			
 			return sessionBuilder.buildSessionFactory();
@@ -103,7 +104,11 @@ public class ApplicationContextConfig {
 				return new CartDAOImpl(sessionFactory);
 		}
 		
-		
+		@Autowired
+		@Bean(name = "CheckoutDAO")
+		public CheckoutDAO getCheckoutDAO(SessionFactory sessionFactory) {
+				return new CheckoutDAOImpl(sessionFactory);
+		}
 		
 		
 		

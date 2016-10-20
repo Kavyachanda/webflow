@@ -80,30 +80,13 @@ width:100%;
    </ul>
    </div>
   </nav>
-<%-- <c:forEach items="${IndividualProduct}" var="product">
-			<div class="col-xs-3 ">
-				<div class="img"><a href="IndividualProduct/${product.id}"></a>
 
-<h1><c:out value="${product.name }"/></h1>
-<div class="horizontal">
-<div class="thumbnail">
-<img height="300px" width="300px" alt="${product.id }"
-				src="<c:url value="/resources/images/Product/${product.id }.jpg"></c:url>">
-		</div>
-		</div>
-		<div align="right">
-		<c:out value="${product.name}"/><br>
-						<c:out value="${product.price }"/><br>
-				</div>
-				</div>
--+				</div>
-</c:forEach> --%>
 <br><br>
 
 	<div class="container">
 		<c:forEach items="${IndividualProduct}" var="product">
 		<h2><c:out value="${product.name }"/></h2>
-		<br>
+		
 			<div class="col-xs-6 w3-animate-left">
 				<div class="img">
 					<img  height="300px" width="300px" alt="${product.id}" src="<c:url value="/resources/images/Product/${product.id}.jpg"></c:url>">
@@ -128,8 +111,8 @@ width:100%;
 						<c:choose>
 								<c:when test="${LoggedIn}">
 									<form action="addtocart/${product.id}">
-										<input type="number" value="1" name="quantity"
-											class=" form-control  btn-block  "> 
+										<!-- <input type="number" value="1" name="quantity"
+											class=" form-control  btn-block  "> --> 
 											<br><input
 											type="submit" value="Add to Cart"
 											class="btn btn-xs btn-success btn-block">

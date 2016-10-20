@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
-    font-size: 100%;
+    font-size: 15px;
 	background:	#fff;
 	font-family: 'Cabin', sans-serif;
 }
@@ -13,7 +13,7 @@ p{
 	margin:0;
 }
 h1,h2,h3,h4,h5,h6{
-	margin:0;
+	margin:60px;
 }
 ul,label{
 	margin:0;

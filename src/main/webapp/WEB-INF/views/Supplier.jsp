@@ -76,7 +76,7 @@ body {
 	<c:url var="addAction" value="addSupplier"></c:url>
 
 	<form:form action="${addAction}" modelAttribute="supplier" id="btn-add">
-		<h3>
+		
 			<c:if test="$(supplier.id==0}">
 
 			</c:if>
@@ -84,7 +84,7 @@ body {
 
 				<%--  <form:hidden path="id"/> --%>
 			</c:if>
-		</h3>
+		
 		       <div class="container">
           <div class="col-xs-8 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
           <ul class="nav nav-pills nav-justified">

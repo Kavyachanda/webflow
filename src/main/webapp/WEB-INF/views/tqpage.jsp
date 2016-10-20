@@ -1,16 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-      <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-    <%@ page isELIgnored="false"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ page isELIgnored="false"%>
     
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>select payment</title>
+<title>thankyou</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,9 +21,14 @@
     margin-top: 100px;
     
 } 
+
 body {
 width:100%;
 }
+
+
+.glyphicon-ok { color:green; }
+
   </style>
 </head>
 <body  style="background-color:#ffffff;">
@@ -66,35 +70,10 @@ width:100%;
    </ul>
    </div>
   </nav>
-  <br><br>
-   <div class="container">
-  <div class="row col-xs-4"></div>
-  <div class="col-xs-4">
-  <div class="panel panel-primary">
-     <div class="panel-heading">
-   
-      <div class="row">
-       <h3 class="panel-title " style="padding-left: 20px">Select Payment type</h3>
-       
-      </div>
-     </div>
-     <div class="panel-body">
-<form method="post" action="${flowExecutionUrl}">
-        <input type="hidden" name="_eventId" value="method">
-        <input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}" />
-      <input type="radio" name="method" value="cod">  Cash On Delivery<br><br>
-     <input type="radio" name="method" value="card">  Credit Card <br><br>
-         <button class="btn btn-success btn-sm btn-block" type="submit">proceed</button>  
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
-        <br><br><br><br><br><br>
-        <%@include file="Footer.jsp"%>	
+  <div style="text-align:center;padding-top:40px;padding-bottom:40px">
+  <h1> Thank You!!</h1>
+  <h3>your payment has been received <span class="glyphicon glyphicon-ok"></span></h3>
+  </div>
+   <%@include file="Footer.jsp"%>
 </body>
 </html>
-
-
-
-
